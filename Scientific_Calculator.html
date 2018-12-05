@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Scientic Calculator</title>
+	<link rel="stylesheet" type="text/css" href="Scientific_calc.css">
+</head>
+<body onload="powerBtn(); showTime()">
+ <div class="container">
+ 	<div class="top">	
+ 		<div class="top-left"><p id="timee"></p></div>
+ 		<table width="280px" height="100px" border="1px">
+ 			<th><div id="screen"></div></th>
+ 		</table>
+ 	</div>
+ 	<div class="cont">
+ 		<div class="left-table">
+ 		<table border="1px" width="100px" height="80px"" cellspacing="10px">
+	 			<tr>
+	 				<td>Shift</td><td>Alpha</td>
+	 			</tr>
+	 			<tr>
+	 				<td onclick="inverse()"><i>x</i><sup>-1</sup></td><td onclick="comb()"><i>nCr</i></td>
+	 			</tr>
+	 		</table>
+ 		</div>
+	 	<div class="controls">
+	 		<div class="left"></div>
+	 		<div class="right"></div>
+	 		<div class="up"></div>
+	 		<div class="down"></div>
+	 		<div class="center"></div>
+	 	</div>
+	 	<div class="right-table">
+	 		<table border="1px" width="100px" height="80px" cellspacing="10px">
+	 			<tr>
+	 				<td onclick="powerBtn()" id="powerDisplay" colspan="2">OFF</td>
+	 			</tr>
+	 			<tr>
+	 				<td onclick="perm()"><i>nPr</i></td><td onclick="rad()"><i>Rad</i></td>
+	 			</tr>
+	 		</table>
+	 	</div>
+	 </div>
+	 <div class="clearfix"></div>
+ 	<div class="tbl">
+ 	<table height="100px" width="300px" border="1px" cellspacing="10px">
+ 		<tr>
+ 			<td onclick="root()">&#8730;</td><td onclick="cbrt()">&#8731;</td><td onclick="qtrt()"><i>x<sup>3</sup></i></td><td onclick="squ()"><i>x<sup>2</sup></i></td><td onclick="log()">log</td><td onclick="log_2()">log2</td>
+ 		</tr>
+ 		<tr>
+ 			<td onclick="asin()">sin<sup>-1</sup></td><td onclick="acos()">cos<sup>-1</sup></td><td onclick="atan()">tan<sup>-1</sup></td><td onclick="sin()">sin</td><td onclick="cos()">cos</td><td onclick="tan()">tan</td>
+ 		</tr>
+ 		<tr>3
+ 			<td onclick="fac()"><i>x!</i></td><td onclick="surd()"><i><sup>x</sup>&#8730; y</i></td><td onclick="num('(')">(</td><td onclick="num(')')">)</td><td onclick="pi()">&pi;</td><td onclick="pwr()"><i>x <sup>y</i></sup></td>
+ 		</tr>
+ 	</table>
+ 	<table height="150px" width="300px" border="1px" cellspacing="10px">
+ 		<tr>
+ 			<td onclick="num(7)">7</td><td onclick="num(8)">8</td><td onclick="num(9)">9</td><td onclick="del()">DEL</td><td onclick="ac()">AC</td>
+ 		</tr>
+ 		<tr>
+ 			<td onclick="num(4)">4</td><td onclick="num(5)">5</td><td onclick="num(6)">6</td><td onclick="operator('*')">&#215;</td><td onclick="operator('/')">&#247;</td>
+ 		</tr>
+ 		<tr>
+ 			<td onclick="num(1)">1</td><td onclick="num(2)">2</td><td onclick="num(3)">3</td><td onclick="operator('+')">&#43</td><td onclick="operator('-')">&#8722</td>
+ 		</tr>
+ 		<tr>
+ 			<td onclick="num(0)">0</td><td onclick="num('.')">&sdot;</td><td onclick="expo()">x10<sup><i>x</i></sup></td><td>Ans</td><td onclick="execute()">=</td>
+ 		</tr>	
+ 	</table>
+ 	<script type="text/javascript" src="Sci_calc.js"></script>
+ </div>
+ </div>
+</body>
+</html>

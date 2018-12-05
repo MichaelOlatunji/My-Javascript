@@ -1,0 +1,189 @@
+body{
+	font-size: 0.9em;
+	color: #fff;
+}
+
+.container{
+	width: 320px;
+	margin: auto;
+	border: solid 1px #333;
+	background-color: #eee;
+	text-align: center;
+	border-radius: 10px; 
+}
+
+.cont div{
+	float: left;
+}
+
+.top-left{
+	width: 150px;
+	height: 50px;
+	border: solid 1px #ccc;
+	float: right;
+	margin: 10px 23px;
+	background-color: rgba(60,180,114, 0.3);
+	text-align: center;
+	font-size: 2em;
+	font-family: lcd;
+	color: #d65;
+
+}
+
+.top-left p{
+	margin-top: 10px; 
+}
+
+.top table th{
+	background-color: #9cf;
+	text-align: right;
+	color: #111;
+	margin-right: 5px;
+	font-size: 2em;
+	font-family: lcd;
+	padding: 20px 5px;
+}
+
+.top table th div{
+	border-right: 3px solid transparent;
+	animation: blink .75s infinite;
+}
+
+
+.clearfix{
+	float: none;
+}
+
+.left-table{
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.right-table{
+	margin-top: 20px;
+}
+
+.left-table td, .right-table td{
+	background-color: #ccc;
+	font-size: 0.8em;
+	width: 30px;
+	height: 20px;
+}
+
+.left-table td:hover, .right-table td:hover{
+	background-color: #888;
+}
+
+.controls{
+	margin: auto;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	border: solid 1px #ccc;
+	position: relative;
+	background-color: #888;
+	margin-top: 15px;
+	cursor: pointer;	
+}
+
+.controls .center{
+	width: 50px;
+	height: 50px;
+	border: solid 1px #ccc;
+	position: absolute;
+	border-radius: 50%;
+	left: 25px;
+	top: 25px;
+}
+
+.controls .left{
+	width: 24px;
+	height: 50px;
+	border: solid 1px #ccc;
+	position: absolute;
+	left:0;
+	top: 25px;
+	border-top-left-radius: 10px 20px;
+	border-bottom-left-radius: 10px 20px;
+}
+
+.controls .right{
+	width: 24px;
+	height: 50px;
+	border: solid 1px #ccc;
+	position: absolute;
+	left:75px;
+	top: 25px;
+	border-top-right-radius: 13px 30px;
+	border-bottom-right-radius: 13px 30px;
+}
+
+.controls .up{
+	width: 49px;
+	height: 24px;
+	border: solid 1px #ccc;
+	position: absolute;
+	left:25px;
+	top: 0;
+	border-top-left-radius: 20px 10px;
+	border-top-right-radius: 20px 10px;
+}
+
+.controls .down{
+	width: 49px;
+	height: 24px;
+	border: solid 1px #ccc;
+	position: absolute;
+	left:25px;
+	top: 76px;
+	border-bottom-left-radius: 35px 20px;
+	border-bottom-right-radius: 35px 20px;
+}
+
+.controls div:hover{
+	background-color: #bbb;
+}
+
+table{
+	margin: auto;
+	margin-top: 10px;
+	border:none;
+}
+
+table td{
+	border-radius: 5px;
+	border: solid 1px #ccc;
+	box-shadow: 1px 1px 5px #333;
+	width: 50px;
+	height: 20px;
+	cursor: pointer;
+}
+
+.tbl table:nth-child(1) td{
+	background-color: #bbb;
+}
+
+.tbl table:nth-child(2) td{
+	background-color: #666;
+}
+
+.tbl table:nth-child(1) td:hover{
+	background-color: #999;
+}
+
+.tbl table:nth-child(2) td:hover{
+	background-color: #444;
+}
+
+.tbl table:nth-child(2) tr:nth-child(1) td:nth-child(4), .tbl table:nth-child(2) tr:nth-child(1) td:nth-child(5){
+	background-color: #f35;
+}
+
+.tbl table:nth-child(2) tr:nth-child(1) td:nth-child(4):hover, .tbl table:nth-child(2) tr:nth-child(1) td:nth-child(5):hover{
+ 	background-color: #f03;
+}
+
+@keyframes blink{
+	from,to{border-right-color: transparent;}
+	50%{border-right: solid #fff 3px;  border-right-height: 20px;}
+}
