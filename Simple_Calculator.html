@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="simple_calc.css">
+	<script>
+		var a, b, c, d, w, x, y, z;
+		clearer = false;
+		function num(v){
+			w = document.getElementById('screen');
+			if(clearer){
+				w.innerHTML ="";
+				w.innerHTML += v;
+				clearer =false;
+			}else{
+				w.innerHTML += v;
+			}
+		}
+
+		function operator(n){
+		x = w.innerHTML;
+		y = n;
+		w.innerHTML = "";
+		}
+
+		function execute(){
+			clearer = true;
+			z = w.innerHTML;
+		a = Number(x), b = Number(z);
+		
+		if(y == '*'){
+			w.innerHTML = a * b;
+		}
+		else if(y == '/'){
+			w.innerHTML = a / b;
+		}
+		else if(y == '+'){
+			w.innerHTML = a + b;
+		}
+		else if(y == '-'){
+			w.innerHTML = a - b;
+		}
+			}
+
+		function clr(){
+			w.innerHTML = "";
+		}	
+
+	</script>
+</head>
+<body>
+	<table border="1px">
+		<tr>
+			<th colspan="4" id="screen"></th>
+		</tr>
+		<tr>
+			<td onclick="clr()">AC</td><td onclick="operator('/')">/</td><td onclick="operator('*')">*</td><td onclick="operator('-')">-</td>
+		</tr>
+		<tr>
+			<td onclick="num(9)">9</td><td onclick="num(8)">8</td><td onclick="num(7)">7</td><td onclick="operator('+')" rowspan="2">+</td>
+		</tr>
+		<tr>
+			<td onclick="num(6)">6</td><td onclick="num(5)">5</td><td onclick="num(4)">4</td>
+		</tr>
+		<tr>
+			<td onclick="num(3)">3</td><td onclick="num(2)">2</td><td onclick="num(1)">1</td><td rowspan="2" onclick="execute()">=</td>
+		</tr>
+		<tr>
+			<td onclick="num(00)">00</td><td onclick="num(0)">0</td><td onclick="num(.)"><b>.</b></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stop Watch</title>
+
+	<style>
+
+		body{
+			background: linear-gradient(to right, #000066, #ccc);
+		}
+		.wide{
+			width: 80%;
+			background-color: #ff9900;
+			margin-left: 10%;
+			margin-top: 20vh;
+			border-radius: 50px;
+			box-shadow: 0 0 50px rgba(0,0,0,0.9)  
+		}
+
+		.wide input{
+			outline: none;
+			border: none;
+			width: 150px;
+			font-size: 100px;
+			text-align: center;
+			background-color: #ff9944;
+			box-shadow: 0px 0px 20px #000000;
+			font-family: lcd;
+		}
+
+		.wide table tr td:nth-child(even){
+			font-size: 130px;
+			padding-bottom: 30px;
+
+		}
+
+		table{
+			display: flex;
+			justify-content: center;
+		}
+
+		h2{
+			text-align: center;
+			font-size: 3em;
+			padding: 0;
+			margin: 0;
+			font-family: cursive;
+		}
+
+		.wide .buttons{
+			display: flex;
+			justify-content: space-around;
+			padding-bottom: 20px;
+		}
+
+		.buttons button{
+			width: 100px;
+			height: 50px;
+			background-color: #ff9966;
+			border: outset 2px #f96;
+			
+			outline: 0;
+			border-radius: 10px;
+			transition: .5s;
+		}
+
+		.buttons button:hover{
+			color: #fff;
+			background-color: #006;
+		}
+
+		#div{
+			margin-left: 10%;
+			width: 80%;
+			display: flex;
+			margin-top: 100px;
+			background-color: #ff9900;
+			color: #fff;
+			font-size: 2em;
+			padding: 0 5%;
+		}
+	</style>
+	<script>
+		var h, m, s, l;
+
+		function counting(){
+			h = hours.value;
+			m = minutes.value;
+			s = seconds.value;
+			l = milli.value;
+
+
+			if(m == 60 && h >=0){
+				minutes.value = 0;
+				m = minutes.value;
+				h++;
+				hours.value = h;
+			}
+
+			if(s == 60 && m >= 0 && m<=60){
+				seconds.value = 0;
+				s = seconds.value;
+				m++;
+				minutes.value = m;
+			}
+
+			if(l == 99 && s >= 0 && s <=60){
+				milli.value = 0;
+				l = milli.value;
+				s++;
+				seconds.value = s;
+
+			}
+
+			if(l >= 0 && l <=99){
+				l++;
+				milli.value = l;
+				s = setTimeout(counting, 10);
+			}
+			
+		}
+
+		function lap(){
+
+			document.getElementById('div').innerHTML += hours.value+ ' : ' +minutes.value+ ' : ' +seconds.value+ ' : ' +milli.value+ '<br>';
+
+		}
+
+		function pause(){
+			x = clearTimeout(s);
+		}
+
+		// 		var a, b, c, d;
+				
+		// 		hours.value = a;
+		// 		minutes.value = b;
+		// 		seconds.value = c;
+		// 		milli.value = d;
+
+		// 		a = w.value;
+		// 		b = x.value;
+		// 		c = y.value;
+		// 		d = z.value;
+
+		// 	}
+	</script>
+</head>
+<body>
+<div class="wide"> 
+	<h2>Stop Watch</h2>
+	<table>
+	  <tr><td><input type="text" name="" placeholder="00" value="00" id="hours"></td> <td>:</td>
+	  <td><input type="text" name="" placeholder="00" value="00" id="minutes"></td><td> :</td>
+	  <td><input type="text" name="" placeholder="00" value="00" id="seconds"></td><td> :</td>
+	  <td><input type="text" name="" placeholder="00" value="00" id="milli"></td></tr></table><br><br>
+	  <div class="buttons">
+	  <button onclick="lap()">Lap</button>
+	  <button onclick="counting()">Start</button>
+	  <button onclick="pause()">Pause</button>
+	  <button>Refresh</button></div>
+	</div>
+	 <div id="div">
+	 </div>
+</body>
+</html>

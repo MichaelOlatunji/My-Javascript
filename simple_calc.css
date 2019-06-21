@@ -1,0 +1,36 @@
+body{
+	display: flex;
+	justify-content: center;
+}
+table{
+	margin-top: 50px;
+	height: 350px;
+	width: 350px;
+	border-collapse: collapse;
+	text-align: center;
+	box-shadow: 5px 5px 20px rgba(0,0,0,0.9);
+}
+
+table th{
+	height: 60px;
+	font-family: lcd;
+	font-size: 2em;
+	text-align: right;
+}
+
+table td{
+	background-color: #0ac;
+	transition: 0.5s;
+	cursor: pointer;
+}
+
+table td:hover{
+	background-color: #009;
+	color: #fff;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.9)
+}
+
+table th{
+	background-color: #ccc;
+	color: #000;
+}
