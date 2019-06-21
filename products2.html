@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Our Products, Order now</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">	
+		body{
+			text-align: center;
+			font-family: cursive,  sans-serif;
+			overflow-x: hidden;
+			font-size: .8em;
+		}
+		table{
+			border-collapse: collapse;
+		}
+
+		img{
+			width: 100px;
+			height: 50px;
+		}
+
+		input:disabled{
+			outline: 0;
+			border: 0;
+			background-color: #fff;
+			font-size: 1.2em;
+			width: 100%;
+			height: 50px;
+			text-align: center;
+		}
+
+		input:enabled{
+			text-align: center;
+			width: 100px;
+			height: 50px;
+			font-size: 1.2em;
+		}
+		table tr td:nth-child(6){
+			width: 100px;
+		}
+
+		body div{ 
+			position: relative;
+			top: -350px;
+			left: 320px;		
+		}
+
+		body div img{
+			position: fixed; /* Stay in place */
+    		z-index: 1;
+			background-color: rgb(0,0,0); /* Fallback color */
+   			 background-color: rgba(0,0,0,0.4);
+			transform: scale(6,8);
+
+		}
+	</style>
+
+</head>
+ <body onload="work()" onkeyup ="add('me','tot'); add('rmn','tut'); add('pri','tal'); add('val','tolt'); add('res','total'); ">
+	<table border="1px" height="500px">
+		<tr><th>PRODUCTS</th><th>NAME</th><th>QUANTITY <br>AVAILABLE</th><th>NEW QUANTITY<br> AVAILABLE</th><th>UNIT PRICE ($)</th><th>ORDER</th><th>TOTAL</th>
+		</tr>
+		<tr>
+			<td><img src="images/imac.jpg" alt="image failed to load" id="lar"></td><td>iMac</td><td><input type="text" name="" value="70" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="1100" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(0)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/macbook-t.jpg" alt="image failed to load" id="lar1"></td><td>MacBook</td><td><input type="text" name="" value="180" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="1300"  disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(1)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/iWatch.jpg" alt="image failed to load" id="lar2"></td><td>iWatch</td><td><input type="text" name="" value="300" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="400" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(2)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/airpods.jpg" alt="image failed to load" id="lar3"></td><td>airPods</td><td><input type="text" name="" value="250" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="500" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(3)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/iphone-xmax.jpg" alt="image failed to load" id="lar4"></td><td>iPhone Xmax</td><td><input type="text" name="" value="100" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="1100"  disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(4)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/iphone_xr.jpg" alt="image failed to load" id="lar5"></td><td>iPhone Xr</td><td><input type="text" name="" value="160" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="750"  disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(5)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/iphone_x.jpg" alt="image failed to load" id="lar6"></td><td>iPhone Xs</td><td><input type="text" name="" value="120" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="1000" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(6)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/macbook-pro.jpg" alt="image failed to load" id="lar7"></td><td>MacBook Pro</td><td><input type="text" name="" value="150" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="1300" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(7)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/imac-pro.jpg" alt="image failed to load" id="lar8"></td><td>iMac Pro</td><td><input type="text" name="" value="25" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="5000" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(8)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td><img src="images/mini.jpeg" alt="image failed to load" id="lar9"></td><td>Mac mini</td><td><input type="text" name="" value="40" disabled="" class="me"></td><td><input type="text" name="" class="rmn" disabled></td><td><input type="text" name="" value="800" disabled="" class="pri"></td><td><input type="text" name="" class="val" onkeyup="calc(9)"></td><td><input type="text" name="" class="res" disabled=""></td>
+		</tr>
+		<tr>
+			<td colspan="2">OVERALL TOTAL</td><td id="tot" ></td><td id="tut"></td><td id="tal"></td><td id="tolt"></td><td id="total"></td>
+		</tr>
+	</table>
+	<div id="large"></div>
+	<script type="text/javascript" src="products.js"></script>
+</body>
+</html>
